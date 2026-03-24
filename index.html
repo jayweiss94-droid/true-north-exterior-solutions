@@ -323,14 +323,16 @@
     }
     .trust-track {
       display: flex;
-      overflow-x: auto;
+      overflow: hidden;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
     }
     .trust-track::-webkit-scrollbar { display: none; }
     @media (max-width: 639px) {
-      .trust-track { overflow: hidden !important; }
       .trust-track > div { animation: trust-scroll 20s linear infinite; }
+    }
+    @media (min-width: 640px) {
+      .trust-duplicates { display: none !important; }
     }
     @media (prefers-reduced-motion: reduce) {
       .trust-track > div { animation: none !important; }
@@ -670,7 +672,8 @@
         <span>Free Estimates</span>
       </div>
 
-      <!-- Duplicate for seamless mobile marquee -->
+      <!-- Duplicate for seamless mobile marquee — hidden on desktop via trust-duplicates class -->
+      <div class="trust-duplicates" style="display:contents">
       <div class="trust-div"></div>
       <div class="trust-item" aria-hidden="true">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="var(--cyan)" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
@@ -696,6 +699,7 @@
         <svg width="19" height="19" viewBox="0 0 24 24" fill="var(--cyan)" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         <span>Free Estimates</span>
       </div>
+      </div><!-- end trust-duplicates -->
 
     </div>
   </div>
