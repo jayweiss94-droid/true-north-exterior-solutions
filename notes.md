@@ -4,8 +4,8 @@
 - **Niche:** home-services
 - **Status:** review
 - **Created:** 2026-03-23
-- **GitHub:**
-- **Vercel URL:**
+- **GitHub:** https://github.com/jayweiss94-droid/true-north-exterior-solutions
+- **Vercel URL:** https://true-north-exterior-solutions.vercel.app
 - **Webhook URL:** (TODO: add n8n webhook URL to form action="" in index.html)
 - **GA4 ID:** (TODO: replace GA4 comment in index.html and privacy-policy.html)
 - **Favicon:** yes (brand_assets/favicon.png)

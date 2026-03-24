@@ -22,10 +22,11 @@
   <meta name="twitter:description" content="Professional exterior cleaning in Vernon, BC — pressure washing, soft washing, window cleaning & gutter services. Fully insured — free estimates." />
   <meta name="twitter:image" content="brand_assets/ogimage.png" />
 
-  <!-- Fonts: Oswald (headings) + Inter (body) -->
+  <!-- Fonts: Oswald (headings) + Inter (body) — loaded async to avoid render blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500&display=swap"></noscript>
 
   <!-- GA4 snippet: replace when G-ID is provided -->
 
@@ -57,7 +58,7 @@
         "closes": "18:00"
       }
     ],
-    "areaServed": "Vernon, Kelowna, Lake Country, Coldstream, Armstrong, Lumby, Enderby, Predator Ridge, Okanagan Landing, Bella Vista",
+    "areaServed": "Vernon, Lake Country, Coldstream, Armstrong, Lumby, Enderby, Predator Ridge, Okanagan Landing, Bella Vista",
     "priceRange": "$$",
     "image": "brand_assets/ogimage.png",
     "sameAs": [
@@ -81,10 +82,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Do you serve Kelowna and surrounding areas?",
+        "name": "What areas do you serve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes — True North Exterior Solutions serves Vernon and the entire Greater Okanagan, including Kelowna, Lake Country, Coldstream, Armstrong, Lumby, Enderby, Predator Ridge, Okanagan Landing, and Bella Vista."
+          "text": "True North Exterior Solutions serves Vernon and surrounding communities including Lake Country, Coldstream, Armstrong, Lumby, Enderby, Predator Ridge, Okanagan Landing, and Bella Vista."
         }
       },
       {
@@ -123,7 +124,8 @@
   }
   </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- CDN removed for production — run build-css.mjs again if you add new Tailwind classes -->
+  <link rel="stylesheet" href="styles.css">
 
   <style>
     :root {
@@ -761,7 +763,7 @@
 
       <!-- Roof Installation -->
       <article class="svc-card fade-up" style="transition-delay:0.28s;">
-        <img class="svc-card-img" src="brand_assets/workpohto7.jpg" alt="Before and after roof installation in Vernon BC — old shingles replaced with new metal roof" width="400" height="190" loading="lazy" />
+        <img class="svc-card-img" src="brand_assets/workphoto7.jpg" alt="Before and after roof installation in Vernon BC — old shingles replaced with new metal roof" width="400" height="190" loading="lazy" />
         <div class="svc-card-overlay"></div>
         <div class="svc-card-body">
           <h3>Roof Installation</h3>
@@ -1217,7 +1219,6 @@
         <p style="font-family:'Oswald',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--cyan);margin:0 0 14px;">Service Area</p>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px;">
           <li style="color:rgba(255,255,255,0.5);font-size:0.86rem;">Vernon</li>
-          <li style="color:rgba(255,255,255,0.5);font-size:0.86rem;">Kelowna</li>
           <li style="color:rgba(255,255,255,0.5);font-size:0.86rem;">Lake Country</li>
           <li style="color:rgba(255,255,255,0.5);font-size:0.86rem;">Coldstream</li>
           <li style="color:rgba(255,255,255,0.5);font-size:0.86rem;">Armstrong &amp; Enderby</li>
